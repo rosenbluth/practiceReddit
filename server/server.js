@@ -7,8 +7,8 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require('express');
 const app = express();
 const knex = require('../db/knex');
-const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy;
+
+
 const path = require('path');
 
 app.disable('x-powered-by');
