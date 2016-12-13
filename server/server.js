@@ -28,19 +28,15 @@ app.use(session({
     saveUninitialized: false,
     cookie: {}
 }))
-app.use(passport.initialize());
-app.use(passport.session());
 
-// const Account = require('./models/account');
-// passport.use(new LocalStrategy(Account.authenticate()));
-// passport.serializeUser(Account.serializeUser());
-// passport.deserializeUser(Account.deserializeUser());
 
 const users = require('./routes/users.js');
 const posts = require('./routes/posts.js');
+const comments = require('./routes/comments.js');
 
 app.use('/api', users);
 app.use('/api', posts);
+app.use('/api', comments);
 
 
 app.get('/', function(req, res) {
