@@ -13,6 +13,8 @@ const path = require('path');
 
 app.disable('x-powered-by');
 
+app.use(express.static(path.join(__dirname, '../client')));
+
 const bodyParser = require('body-parser');
 const session = require('express-session');
 
