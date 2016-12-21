@@ -1,2 +1,11 @@
 <h1>Booyah from Sign up page</h1>
 <p>{{view.test}}</p>
+
+
+  <form>
+    User name:<br>
+    <input type="text" name="username" ng-model="user.username"><br>
+    Password:<br>
+    <input type="password" name="password" ng-model="user.password">
+    <input type="button" value="sign up" ng-click="signUp(user)">
+  </form>
